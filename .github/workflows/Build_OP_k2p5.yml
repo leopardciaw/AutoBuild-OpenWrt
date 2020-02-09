@@ -8,8 +8,8 @@
 name: Build_esir_K2P5
 
 on: 
-#  release:
-#    types: [published]
+  release:
+    types: [published]
 
 #  push:
   #  branches: 
