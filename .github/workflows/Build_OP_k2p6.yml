@@ -8,10 +8,10 @@
 name: Build_esir_K2P6
 
 on: 
-  release:
-    types: [published]
+#  release:
+#    types: [published]
 
-#  push:
+  push:
   #  branches: 
   #    - master
 
