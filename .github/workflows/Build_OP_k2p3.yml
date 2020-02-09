@@ -5,7 +5,7 @@
 # 
 #=================================================
 
-name: Build_esir_K2P2
+name: Build_esir_K2P3
 
 on: 
   release:
@@ -69,12 +69,14 @@ jobs:
         ./scripts/feeds install -a
 
     - name: Load custom configuration
+      env:
+        CONFIG_FILE: 'k2p1.config'
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $customizek2p_SH
+        chmod +x ./customizek2p.sh && ./customizek2p.sh
         cd openwrt
-        ../$customizek2p_SH
+        ../$customizek2p.sh
         make defconfig
         
     - name: Download package
