@@ -7,11 +7,11 @@
 
 name: Build_esir_K2P8
 
-on: 
+#on: 
 #  release:
 #    types: [published]
 
-  push:
+#  push:
   #  branches: 
   #    - master
 
