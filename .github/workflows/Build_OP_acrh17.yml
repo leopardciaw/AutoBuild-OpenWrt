@@ -6,10 +6,10 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build_Acrh17µÚ1´Î
+name: Build_Acrh17ÂµÃš1Â´ÃŽ
 
 on:
-release:
+  release:
     types: [published]
 #  push:
 #    branches:
