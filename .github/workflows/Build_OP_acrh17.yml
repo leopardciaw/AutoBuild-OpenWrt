@@ -9,11 +9,11 @@
 name: Build_Acrh17µÚ1´Î
 
 on:
-  release:
-    types: [published]
-#  push:
-#    branches:
-#      - master
+#  release:
+#    types: [published]
+  push:
+    branches:
+      - master
 #    paths:
 #      - '.config'
 #  schedule:
