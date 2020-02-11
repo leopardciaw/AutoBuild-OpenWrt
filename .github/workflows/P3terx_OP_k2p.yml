@@ -6,16 +6,16 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_K2P9
+name: P3TERX_K2P10
 
 on:
-#release:
+#  release:
 #    types: [published]
-  push:
-    branches:
-      - master
-#    paths:
-      - '.config'
+#  push:
+#    branches:
+#      - master
+   paths:
+      - 'k2p.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
