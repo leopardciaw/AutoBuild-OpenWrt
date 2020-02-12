@@ -10,7 +10,7 @@ name: P3TERX_K2P11
 
 on:
   release:
-    types: [published]
+    types: [edited]
 #   push:
 #    branches:
 #      - master
@@ -47,7 +47,7 @@ jobs:
         sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     - name: Clone source code
       env:
-        REPO_URL: https://github.com/coolsnowwolf/lede
+        REPO_URL: https://github.com/leopardciaw/lede
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
@@ -85,12 +85,12 @@ jobs:
       run: |
         cd openwrt
         make -j1 V=s
-    - name: Upload bin directory
-      uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: OpenWrt_bin
-        path: openwrt/bin
+  #  - name: Upload bin directory
+  #    uses: actions/upload-artifact@master
+  #    if: always()
+  #    with:
+  #      name: OpenWrt_bin
+  #      path: openwrt/bin
 
     - name: Organize files
       if: always()
