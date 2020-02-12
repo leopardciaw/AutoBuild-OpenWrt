@@ -6,15 +6,15 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build_Acrh17-3
+name: Acrh17-3
 
 on:
 #  release:
 #    types: [published]
   push:
-#    branches:
-#      - master
-   paths:
+    branches:
+      - master
+    paths:
      - 'acrh17.config'
 #  schedule:
 #    - cron: 0 8 * * 5
