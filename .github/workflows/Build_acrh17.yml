@@ -9,15 +9,19 @@
 name: Acrh17-3
 
 on:
-#  release:
-#    types: [published]
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
+
+#  push:
+#    branches:
+#      - master
+
 #   paths:
 #     - 'acrh17.config'
+
 #  schedule:
 #    - cron: 0 8 * * 5
+
 #  watch:
 #    types: [started]
 
