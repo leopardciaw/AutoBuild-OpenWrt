@@ -6,12 +6,12 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build_Acrh17-2
+name: Build_Acrh17-3
 
 on:
 #  release:
 #    types: [published]
-#  push:
+  push:
 #    branches:
 #      - master
    paths:
