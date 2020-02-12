@@ -59,7 +59,7 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: 'k2p1.config'
+        CONFIG_FILE: 'k2p.config'
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
