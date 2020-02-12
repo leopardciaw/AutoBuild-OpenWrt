@@ -11,11 +11,11 @@ name: P3TERX_K2P10
 on:
 #  release:
 #    types: [published]
-#  push:
+   push:
 #    branches:
 #      - master
-   paths:
-      - 'k2p.config'
+     paths:
+       - 'k2p.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
