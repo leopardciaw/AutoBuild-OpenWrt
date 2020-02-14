@@ -85,17 +85,17 @@ jobs:
       run: |
         cd openwrt
         make -j1 V=s
-  #  - name: Upload bin directory
-  #    uses: actions/upload-artifact@master
-  #    if: always()
-  #    with:
-  #      name: OpenWrt_bin
-  #      path: openwrt/bin
+    - name: Upload bin directory
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: OpenWrt_bin
+        path: openwrt/bin
 
     - name: Organize files
       if: always()
       run: |
-        cd openwrt/bin/targets/*/*
+        cd openwrt/bin/targets/ramips/mt7621/
         rm -rf packages
         echo "::set-env name=FIRMWARE::$(pwd)"
     - name: Upload firmware
