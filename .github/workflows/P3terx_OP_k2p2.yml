@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_K2P12
+name: P3TERX_K2P13
 
 on:
 #  release:
@@ -74,23 +74,24 @@ jobs:
       run: |
         cd openwrt && make download -j8
         find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
-    - name: Multi-thread compile
+        find dl -size -1024c -exec rm -f {} \;    - name: Multi-thread compile
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc)
+
     - name: Single-thread compile
       if: failure()
       run: |
         cd openwrt
         make -j1 V=s
-    - name: Upload bin directory
-      uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: OpenWrt_bin
-        path: openwrt/bin
+
+#    - name: Upload bin directory
+#      uses: actions/upload-artifact@master
+#      if: always()
+#      with:
+#        name: OpenWrt_bin
+#        path: openwrt/bin
 
     - name: Organize files
       if: always()
@@ -98,6 +99,7 @@ jobs:
         cd openwrt/bin/targets/ramips/mt7621/
         rm -rf packages
         echo "::set-env name=FIRMWARE::$(pwd)"
+
     - name: Upload firmware
       uses: actions/upload-artifact@master
       if: always()
