@@ -45,6 +45,7 @@ jobs:
         sudo -E apt-get -qq clean
         curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
         sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+        
     - name: Clone source code
       env:
         REPO_URL: https://github.com/coolsnowwolf/lede
@@ -81,6 +82,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc)
+        
     - name: Single-thread compile
       if: failure()
       run: |
