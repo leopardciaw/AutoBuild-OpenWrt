@@ -6,11 +6,11 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_K2P15
+name: P3TERX_K2P16
 
 on:
-#  release:
-#    types: [published]
+  release:
+    types: [published]
    push:
     branches:
       - master
