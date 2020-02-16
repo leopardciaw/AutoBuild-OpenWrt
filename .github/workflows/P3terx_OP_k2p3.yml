@@ -9,11 +9,11 @@
 name: P3TERX_K2P16
 
 on:
-  release:
-    types: [published]
-#  push:
-#    branches:
-#      - master
+#  release:
+#    types: [published]
+   push:
+     branches:
+       - master
 #     paths:
 #       - 'k2p.config'
 #  schedule:
@@ -89,12 +89,12 @@ jobs:
         cd openwrt
         make -j1 V=s
         
-#    - name: Upload bin directory
-#      uses: actions/upload-artifact@master
-#      if: always()
-#      with:
-#        name: OpenWrt_bin
-#        path: openwrt/bin
+    - name: Upload bin directory
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: OpenWrt_bin
+        path: openwrt/bin
 
     - name: Organize files
       if: always()
@@ -102,6 +102,7 @@ jobs:
         cd openwrt/bin/targets/ramips/mt7621/
         rm -rf packages
         echo "::set-env name=FIRMWARE::$(pwd)"
+        
     - name: Upload firmware
       uses: actions/upload-artifact@master
       if: always()
