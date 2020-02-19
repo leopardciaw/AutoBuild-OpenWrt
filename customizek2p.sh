@@ -14,6 +14,7 @@ cp -rf ./backk2p.d/mt7621.mk openwrt/target/linux/ramips/image/
 cp -rf ./backk2p.d/mt7621_phicomm_k2p.dts openwrt/target/linux/ramips/dts/
 # 删除原主题包
 # rm -rf package/lean/luci-theme-argon
+rm -rf openwrt/package/lean/luci-theme-atmaterial
 # 添加新的包
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
