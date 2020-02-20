@@ -17,7 +17,7 @@ cp -rf ./backk2p.d/mt7621_phicomm_k2p.dts openwrt/target/linux/ramips/dts/
 rm -rf openwrt/package/lean/luci-theme-atmaterial
 # 添加新的包
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
+# git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # 取消bootstrap为默认主题
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
