@@ -6,11 +6,11 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: P3TERX_K2P18-2
+name: P3TERX_K2P18-3
 
 on:
-   release:
-     types: [published]
+#   release:
+#     types: [published]
 
 
 
@@ -53,9 +53,9 @@ on:
 
 
 
-#   push:
-#     branches:
-#       - master
+   push:
+     branches:
+       - master
 #     paths:
 #       - 'k2p.config'
 #  schedule:
