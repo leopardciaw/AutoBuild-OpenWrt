@@ -10,11 +10,11 @@
 name: P3TERX_FW1
 
 on:
-#   release:
-#     types: [published]
-   push:
-     branches:
-       - master
+   release:
+     types: [published]
+#   push:
+#     branches:
+#       - master
 #     paths:
 #       - 'fw.config'
 #  schedule:
