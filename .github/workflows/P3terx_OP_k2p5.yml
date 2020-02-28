@@ -11,9 +11,9 @@ name: P3TERX_K2P18-7
 on:
    release:
      types: [published]
-   push:
-     branches:
-       - master
+#   push:
+#     branches:
+#       - master
 #     paths:
 #       - 'k2p.config'
 #  schedule:
